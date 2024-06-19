@@ -6,12 +6,10 @@ import org.junit.jupiter.api.BeforeEach;
 
 public class BaseTest {
 
-    LoginPage loginPage;
 
     @BeforeEach
     void setUp() {
         Driver.getPage().navigate(ConfigurationReader.getProperty("url"));
-        loginPage = new LoginPage();
     }
 
     @AfterEach

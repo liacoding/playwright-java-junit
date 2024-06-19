@@ -4,6 +4,7 @@ import com.microsoft.playwright.ElementHandle;
 import com.microsoft.playwright.FrameLocator;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
+import com.microsoft.playwright.options.ElementState;
 
 import java.util.List;
 
@@ -83,5 +84,8 @@ public class BrowserUtils {
         return newPage;
     }
 
+    public static void waitForInvisibilityOfElement(Locator locator){
+        locator.elementHandle().waitForElementState(ElementState.HIDDEN);
+    }
 
 }
